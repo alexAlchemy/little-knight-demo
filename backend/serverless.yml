@@ -1,0 +1,23 @@
+service: littleknight-serverless4
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-2
+  profile: aphebis-dev
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: post
+
+  thing:
+    handler: handler.thing
+    events:
+      - httpApi:
+          path: /thing
+          method: get

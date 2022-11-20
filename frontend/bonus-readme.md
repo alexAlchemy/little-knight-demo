@@ -1,0 +1,1 @@
+WARNING: CORS CONFIG might not be baked into infrastructure deployment
